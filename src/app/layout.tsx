@@ -5,6 +5,7 @@ import Navbar from "@/components/Navbar"
 export const metadata = {
   title: "Aditya Kulshrestha",
   description: "Official website for all of my blogs and projects.",
+  metadataBase: new URL('https://adikul.dev'),
 }
 
 export default function RootLayout({
