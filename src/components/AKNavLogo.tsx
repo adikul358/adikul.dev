@@ -2,7 +2,7 @@ import React from 'react'
 
 function AKNavLogo() {
 	return (
-		<svg viewBox="0 0 768 90" xmlns="http://www.w3.org/2000/svg" className="fill-current stroke-current h-[1em]">
+		<svg viewBox="0 0 768 90" xmlns="http://www.w3.org/2000/svg" className="fill-current h-[1em]">
 			<path d="M59.0036 0H23.7244V67.0304H133.09V0H97.8108V17.6396H115.45V49.3908H41.364V17.6396H59.0036V0Z" />
 			<path d="M30.7803 70.5583H20.1965V70.5965H30.7803V70.5583Z" />
 			<path d="M30.7803 72.3604H18.4326V26.4975H0.792969V90H30.7803V88.2361H2.55693V88.1979H30.7803V72.3604Z" />

@@ -553,8 +553,8 @@ video {
   margin-bottom: 3rem;
 }
 
-.mb-2{
-  margin-bottom: 0.5rem;
+.mb-3{
+  margin-bottom: 0.75rem;
 }
 
 .mt-24{
@@ -569,20 +569,16 @@ video {
   margin-top: auto;
 }
 
-.mb-4{
-  margin-bottom: 1rem;
-}
-
-.mb-3{
-  margin-bottom: 0.75rem;
-}
-
 .flex{
   display: flex;
 }
 
 .grid{
   display: grid;
+}
+
+.h-\[1em\]{
+  height: 1em;
 }
 
 .h-\[36px\]{
@@ -595,14 +591,6 @@ video {
 
 .h-\[60px\]{
   height: 60px;
-}
-
-.h-1{
-  height: 0.25rem;
-}
-
-.h-\[1em\]{
-  height: 1em;
 }
 
 .min-h-screen{
@@ -644,10 +632,6 @@ video {
 
 .flex-col{
   flex-direction: column;
-}
-
-.items-end{
-  align-items: flex-end;
 }
 
 .items-center{
@@ -692,13 +676,13 @@ video {
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
 }
 
-.bg-primary-700\/80{
-  background-color: rgb(3 14 54 / 0.8);
-}
-
 .bg-primary-800{
   --tw-bg-opacity: 1;
   background-color: rgb(2 5 33 / var(--tw-bg-opacity));
+}
+
+.bg-primary-800\/80{
+  background-color: rgb(2 5 33 / 0.8);
 }
 
 .bg-white\/20{
@@ -709,16 +693,8 @@ video {
   background-color: rgb(255 255 255 / 0.8);
 }
 
-.bg-primary-800\/80{
-  background-color: rgb(2 5 33 / 0.8);
-}
-
 .fill-current{
   fill: currentColor;
-}
-
-.stroke-current{
-  stroke: currentColor;
 }
 
 .py-12{
@@ -757,16 +733,6 @@ video {
   line-height: 1.25rem;
 }
 
-.text-xl{
-  font-size: 1.25rem;
-  line-height: 1.75rem;
-}
-
-.text-4xl{
-  font-size: 2.25rem;
-  line-height: 2.5rem;
-}
-
 .font-bold{
   font-weight: 700;
 }
@@ -787,14 +753,6 @@ video {
 
 .text-white\/80{
   color: rgb(255 255 255 / 0.8);
-}
-
-.text-inherit{
-  color: inherit;
-}
-
-.text-white\/70{
-  color: rgb(255 255 255 / 0.7);
 }
 
 .underline{
@@ -827,12 +785,15 @@ video {
 }
 
 nav .nav-link{
+  width: -moz-max-content;
+  width: max-content;
   cursor: pointer;
   font-family: Urbanist, system-ui, sans-serif;
   font-size: 0.875rem;
   line-height: 1.25rem;
+  font-weight: 600;
   text-transform: uppercase;
-  color: rgb(255 255 255 / 0.7);
+  color: rgb(255 255 255 / 0.8);
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 200ms;
@@ -840,6 +801,27 @@ nav .nav-link{
 }
 
 nav .nav-link:hover{
+  color: rgb(255 255 255 / 0.95);
+}
+
+@media not all and (min-width: 640px){
+  nav .nav-link{
+    width: 100%;
+  }
+}
+
+footer .sitemap-link{
+  cursor: pointer;
+  font-family: Urbanist, system-ui, sans-serif;
+  font-weight: 500;
+  color: rgb(255 255 255 / 0.8);
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 200ms;
+  transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+}
+
+footer .sitemap-link:hover{
   color: rgb(255 255 255 / 0.95);
 }
 
@@ -859,20 +841,6 @@ footer .social-link{
 }
 
 footer .social-link:hover{
-  color: rgb(255 255 255 / 0.95);
-}
-
-footer .sitemap-link{
-  cursor: pointer;
-  font-family: Urbanist, system-ui, sans-serif;
-  color: rgb(255 255 255 / 0.8);
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 200ms;
-  transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
-}
-
-footer .sitemap-link:hover{
   color: rgb(255 255 255 / 0.95);
 }
 
@@ -897,26 +865,8 @@ footer .sitemap-link:hover{
     padding-right: 6rem;
   }
 
-  .max-lg\:pr-12{
-    padding-right: 3rem;
-  }
-
-  .max-lg\:pr-16{
-    padding-right: 4rem;
-  }
-
-  .max-lg\:pr-8{
-    padding-right: 2rem;
-  }
-
   .max-lg\:pr-6{
     padding-right: 1.5rem;
-  }
-}
-
-@media not all and (min-width: 768px){
-  .max-md\:pr-12{
-    padding-right: 3rem;
   }
 }
 
@@ -954,11 +904,6 @@ footer .sitemap-link:hover{
 
   .sm\:justify-between{
     justify-content: space-between;
-  }
-
-  .sm\:text-4xl{
-    font-size: 2.25rem;
-    line-height: 2.5rem;
   }
 }
 

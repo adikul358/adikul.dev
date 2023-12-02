@@ -9,13 +9,13 @@
 }
 
 nav .nav-link {
-	@apply text-sm font-display text-white/70 hover:text-white/95 cursor-pointer transition-colors ease-out duration-200 uppercase;
+	@apply max-sm:w-full w-max text-sm font-semibold font-display text-white/80 hover:text-white/95 cursor-pointer transition-colors ease-out duration-200 uppercase;
+}
+
+footer .sitemap-link {
+	@apply font-medium font-display text-white/80 hover:text-white/95 cursor-pointer transition-colors ease-out duration-200;
 }
 
 footer .social-link {
 	@apply flex flex-row items-center text-sm font-light text-white/80 hover:text-white/95 cursor-pointer transition-colors ease-out duration-200;
-}
-
-footer .sitemap-link {
-	@apply  font-display text-white/80 hover:text-white/95 cursor-pointer transition-colors ease-out duration-200;
 }

@@ -2,6 +2,7 @@ import React from 'react'
 import { FaGlobe, FaEnvelope, FaPhone, FaLinkedin, FaGithub } from "react-icons/fa"
 import Link from "next/link"
 import AKLogo from './AKLogo'
+import AKLogotype from './AKLogotype'
 
 function SitemapLink(
 	{label, link}: {label: string, link?: string}
@@ -39,11 +40,13 @@ function Footer() {
 				<div className="flex flex-row justify-between mb-12 text-white/80">
 					<div className="flex flex-col">
 						<span className="text-2xl mb-3 font-semibold font-display">
-							Aditya Kulshrestha
+							<AKLogotype />
 						</span>
 						<div className="w-[60px] h-[4px] bg-white/80"></div>
 					</div>
-					<span className="text-5xl max-sm:text-4xl max-lg:pr-6 max-sm:pr-0"><AKLogo /></span>
+					<span className="text-5xl max-sm:text-4xl max-lg:pr-6 max-sm:pr-0">
+						<AKLogo />
+					</span>
 					
 				</div>
 
@@ -63,7 +66,7 @@ function Footer() {
 						<div className="flex flex-col gap-y-3 text-white/80 text-sm ">
 							<SocialLink label="+91 78408 69129" link="tel:+917840869129" icon={<FaPhone className="scale-x-[-1]" />} />
 							<SocialLink label="hello@adikul.dev" link="mailto:hello@adikul.dev" icon={<FaEnvelope />} />
-							<SocialLink label="adikul.dev" link="https://adikul.dev" icon={<FaGlobe />} />
+							{/* <SocialLink label="adikul.dev" link="https://adikul.dev" icon={<FaGlobe />} /> */}
 						</div>
 						<div className="flex flex-col gap-y-3 text-white/80 text-sm ">
 							<SocialLink label="/in/adikul358" link="https://linkedin.com/in/adikul358" icon={<FaLinkedin />} newTab />

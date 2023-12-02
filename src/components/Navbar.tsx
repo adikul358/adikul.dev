@@ -25,7 +25,7 @@ function Navbar() {
 			<div className="flex flex-row items-center justify-between h-[60px] page-width">
 				{/* Logotype */}
 				<Link href="/">
-					<span className="text-xl text-white/70 hover:text-white/95 cursor-pointer transition-colors ease-out duration-250">
+					<span className="text-2xl text-white/80 hover:text-white/95 cursor-pointer transition-colors ease-out duration-250">
 						<AKNavLogo />
 					</span>
 				</Link>
