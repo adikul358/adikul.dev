@@ -5,6 +5,7 @@ import { FaRegArrowAltCircleDown } from "react-icons/fa";
 // import { pdfjs, Document, Page } from "react-pdf";
 
 function Resume() {
+
 	const RESUMEPATH = process.env.NEXT_PUBLIC_RESUME_PATH || ""
 	const RESUMENAME = RESUMEPATH.split("/").reverse()[0]
 
@@ -22,7 +23,6 @@ function Resume() {
 	// 	pdfjs.GlobalWorkerOptions.workerSrc = "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js";
 	// 	console.log(RESUMEPATH)
 	// }, [])
-
 
 	return (
     <div className="flex flex-col page-width py-12">

@@ -21,22 +21,23 @@ const NAVITEMS = [
 	},
 ]
 
-function NavLink(
-	{label, link, active}: {label: string, link?: string, active: boolean}
-) {
-	return (
-		<Link href={link || "/" + label.toLowerCase()}>
-			<span className={`nav-link ${active ? "active" : ""}`}>
-				{label}
-			</span>
-		</Link>
-	)
-}
 
 function Navbar() {
 	const [navOpen, setNavOpen] = useState(false)
   const [current, setCurrent] = useState("");
 	const pathname = usePathname()
+
+	function NavLink(
+		{label, link, active}: {label: string, link?: string, active: boolean}
+	) {
+		return (
+			<Link href={link || "/" + label.toLowerCase()} onClick={() => setNavOpen(false)} className="w-full">
+				<span className={`nav-link ${active ? "active" : ""}`}>
+					{label}
+				</span>
+			</Link>
+		)
+	}
 
 	useEffect(() => {
 		setCurrent(pathname.split("/")[1])

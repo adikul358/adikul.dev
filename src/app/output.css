@@ -591,6 +591,10 @@ video {
   display: grid;
 }
 
+.hidden{
+  display: none;
+}
+
 .aspect-\[0\.707\]{
   aspect-ratio: 0.707;
 }
