@@ -3,6 +3,7 @@ import { FaGlobe, FaEnvelope, FaPhone, FaLinkedin, FaGithub } from "react-icons/
 import Link from "next/link"
 import AKLogo from "./AKLogo"
 import AKLogotype from "./AKLogotype"
+import NAVITEMS from "@/NAVITEMS"
 
 function SitemapLink(
 	{label, link}: {label: string, link?: string}
@@ -33,7 +34,7 @@ function SocialLink(
 
 function Footer() {
 	return (
-		<footer className="bg-primary-800 text-white/80 mt-auto">
+		<footer className="bg-primary-800/75 text-white/80 mt-auto">
 			<div className="flex flex-col page-width pt-12 pb-6">
 
 				{/* Name with underline */}
@@ -56,9 +57,7 @@ function Footer() {
 					{/* Sitemap */}
 					<div className="flex flex-col gap-y-2">
 						<SitemapLink label="Home" link="/" />
-						<SitemapLink label="Projects" />
-						<SitemapLink label="Blog" />
-						<SitemapLink label="Resume" link="/Aditya Kulshrestha – Resume.pdf" />
+						{NAVITEMS.map(({label,link},i) => <SitemapLink label={label} link={link} key={i} />)}
 					</div>
 
 					{/* Contact Links */}

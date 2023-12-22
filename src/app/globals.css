@@ -25,7 +25,7 @@ footer .social-link {
 }
 
 h1 {
-	@apply text-4xl font-bold font-display pb-2 border-b border-white/20 w-full;
+	@apply text-4xl font-bold font-display pb-3 border-b-4 border-primary-700 w-full;
 }
 
 button {

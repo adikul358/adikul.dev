@@ -26,7 +26,7 @@ function Resume() {
 
 	return (
     <div className="flex flex-col page-width py-12">
-			<div className="flex flex-row items-center justify-between mb-8 pb-2 border-b border-white/20 w-full">
+			<div className="flex flex-row items-center justify-between mb-8 pb-3 border-b-4 border-primary-700 w-full">
 				<h1 className="pb-0 border-0">Resume</h1>
 				<a href={RESUMEPATH} download={RESUMENAME}>
 					<button className="px-[20px] py-[6px] rounded gap-x-2">

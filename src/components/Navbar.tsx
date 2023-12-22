@@ -5,22 +5,7 @@ import Link from "next/link"
 import { usePathname } from "next/navigation";
 import { FaBars, FaTimes } from "react-icons/fa"
 import AKNavLogo from "./AKNavLogo"
-
-const NAVITEMS = [
-	{
-		label: "Projects",
-		link: "/projects",
-	},
-	{
-		label: "Blog",
-		link: "/blog",
-	},
-	{
-		label: "Resume",
-		link: "/resume",
-	},
-]
-
+import NAVITEMS from "@/NAVITEMS"
 
 function Navbar() {
 	const [navOpen, setNavOpen] = useState(false)
@@ -44,7 +29,7 @@ function Navbar() {
 	}, [pathname])
 
 	return (
-		<nav className="bg-primary-800/80 flex flex-col inset-x-0 backdrop-blur border-primary-100/25 fixed top-0">
+		<nav className="bg-primary-800/75 flex flex-col inset-x-0 backdrop-blur border-primary-100/25 fixed top-0 z-20">
 			<div className="flex flex-row items-center justify-between h-[60px] page-width">
 				{/* Logotype */}
 				<Link href="/">
