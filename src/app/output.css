@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=JetBrains+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Urbanist:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 /*
-! tailwindcss v3.3.5 | MIT License | https://tailwindcss.com
+! tailwindcss v3.3.7 | MIT License | https://tailwindcss.com
 */
 
 /*
@@ -123,8 +123,10 @@ strong {
 }
 
 /*
-1. Use the user's configured `mono` font family by default.
-2. Correct the odd `em` font sizing in all browsers.
+1. Use the user's configured `mono` font-family by default.
+2. Use the user's configured `mono` font-feature-settings by default.
+3. Use the user's configured `mono` font-variation-settings by default.
+4. Correct the odd `em` font sizing in all browsers.
 */
 
 code,
@@ -133,8 +135,12 @@ samp,
 pre {
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   /* 1 */
-  font-size: 1em;
+  font-feature-settings: normal;
   /* 2 */
+  font-variation-settings: normal;
+  /* 3 */
+  font-size: 1em;
+  /* 4 */
 }
 
 /*
@@ -577,6 +583,10 @@ video {
   display: grid;
 }
 
+.aspect-\[0\.707\]{
+  aspect-ratio: 0.707;
+}
+
 .h-\[1em\]{
   height: 1em;
 }
@@ -646,9 +656,9 @@ video {
   justify-content: space-between;
 }
 
-.gap-x-6{
-  -moz-column-gap: 1.5rem;
-       column-gap: 1.5rem;
+.gap-x-3{
+  -moz-column-gap: 0.75rem;
+       column-gap: 0.75rem;
 }
 
 .gap-y-2{
@@ -661,10 +671,6 @@ video {
 
 .gap-y-4{
   row-gap: 1rem;
-}
-
-.border-b{
-  border-bottom-width: 1px;
 }
 
 .border-primary-100\/25{
@@ -746,11 +752,6 @@ video {
   color: rgb(50 85 137 / var(--tw-text-opacity));
 }
 
-.text-primary-500{
-  --tw-text-opacity: 1;
-  color: rgb(22 52 106 / var(--tw-text-opacity));
-}
-
 .text-white\/80{
   color: rgb(255 255 255 / 0.8);
 }
@@ -788,6 +789,11 @@ nav .nav-link{
   width: -moz-max-content;
   width: max-content;
   cursor: pointer;
+  border-radius: 0.25rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  padding-top: 0.375rem;
+  padding-bottom: 0.375rem;
   font-family: Urbanist, system-ui, sans-serif;
   font-size: 0.875rem;
   line-height: 1.25rem;
@@ -801,13 +807,22 @@ nav .nav-link{
 }
 
 nav .nav-link:hover{
-  color: rgb(255 255 255 / 0.95);
+  background-color: rgb(255 255 255 / 0.1);
+  color: rgb(255 255 255 / 0.9);
 }
 
 @media not all and (min-width: 640px){
   nav .nav-link{
     width: 100%;
   }
+}
+
+nav .active{
+  background-color: rgb(255 255 255 / 0.2);
+}
+
+nav .active:hover{
+  background-color: rgb(255 255 255 / 0.2);
 }
 
 footer .sitemap-link{

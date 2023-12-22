@@ -9,7 +9,11 @@
 }
 
 nav .nav-link {
-	@apply max-sm:w-full w-max text-sm font-semibold font-display text-white/80 hover:text-white/95 cursor-pointer transition-colors ease-out duration-200 uppercase;
+	@apply max-sm:w-full rounded w-max text-sm font-semibold font-display text-white/80 hover:text-white/90 hover:bg-white/10 cursor-pointer transition-colors ease-out duration-200 uppercase px-3 py-1.5;
+}
+
+nav .active {
+	@apply bg-white/20 hover:bg-white/20;
 }
 
 footer .sitemap-link {
