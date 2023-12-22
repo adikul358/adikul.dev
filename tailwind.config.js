@@ -1,6 +1,6 @@
-/** @type {import('tailwindcss').Config} */
+/** @type {import("tailwindcss").Config} */
 
-import colors from 'tailwindcss/colors'
+import colors from "tailwindcss/colors"
 
 export const content = ["./src/**/*.{tsx,ts}"]
 

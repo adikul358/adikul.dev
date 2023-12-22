@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=JetBrains+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Urbanist:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=JetBrains+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Urbanist:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 /*
 ! tailwindcss v3.3.7 | MIT License | https://tailwindcss.com
@@ -34,9 +34,11 @@
 4. Use the user's configured `sans` font-family by default.
 5. Use the user's configured `sans` font-feature-settings by default.
 6. Use the user's configured `sans` font-variation-settings by default.
+7. Disable tap highlights on iOS
 */
 
-html {
+html,
+:host {
   line-height: 1.5;
   /* 1 */
   -webkit-text-size-adjust: 100%;
@@ -52,6 +54,8 @@ html {
   /* 5 */
   font-variation-settings: normal;
   /* 6 */
+  -webkit-tap-highlight-color: transparent;
+  /* 7 */
 }
 
 /*
@@ -563,6 +567,10 @@ video {
   margin-bottom: 0.75rem;
 }
 
+.mb-8{
+  margin-bottom: 2rem;
+}
+
 .mt-24{
   margin-top: 6rem;
 }
@@ -619,6 +627,10 @@ video {
   width: 60px;
 }
 
+.w-full{
+  width: 100%;
+}
+
 .flex-grow{
   flex-grow: 1;
 }
@@ -656,6 +668,11 @@ video {
   justify-content: space-between;
 }
 
+.gap-x-2{
+  -moz-column-gap: 0.5rem;
+       column-gap: 0.5rem;
+}
+
 .gap-x-3{
   -moz-column-gap: 0.75rem;
        column-gap: 0.75rem;
@@ -673,8 +690,41 @@ video {
   row-gap: 1rem;
 }
 
+.rounded{
+  border-radius: 0.25rem;
+}
+
+.border-0{
+  border-width: 0px;
+}
+
+.border{
+  border-width: 1px;
+}
+
+.border-2{
+  border-width: 2px;
+}
+
+.border-b{
+  border-bottom-width: 1px;
+}
+
 .border-primary-100\/25{
   border-color: rgb(193 212 232 / 0.25);
+}
+
+.border-white\/20{
+  border-color: rgb(255 255 255 / 0.2);
+}
+
+.border-white{
+  --tw-border-opacity: 1;
+  border-color: rgb(255 255 255 / var(--tw-border-opacity));
+}
+
+.border-black\/20{
+  border-color: rgb(0 0 0 / 0.2);
 }
 
 .bg-black{
@@ -703,9 +753,59 @@ video {
   fill: currentColor;
 }
 
+.px-6{
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
 .py-12{
   padding-top: 3rem;
   padding-bottom: 3rem;
+}
+
+.py-2{
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.py-1{
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+
+.px-4{
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.px-5{
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+.py-1\.5{
+  padding-top: 0.375rem;
+  padding-bottom: 0.375rem;
+}
+
+.py-\[1\.5\]{
+  padding-top: 1.5;
+  padding-bottom: 1.5;
+}
+
+.px-\[5\]{
+  padding-left: 5;
+  padding-right: 5;
+}
+
+.py-\[6px\]{
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+
+.px-\[20px\]{
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .pb-6{
@@ -714,6 +814,14 @@ video {
 
 .pt-12{
   padding-top: 3rem;
+}
+
+.pb-2{
+  padding-bottom: 0.5rem;
+}
+
+.pb-0{
+  padding-bottom: 0px;
 }
 
 .font-display{
@@ -756,8 +864,17 @@ video {
   color: rgb(255 255 255 / 0.8);
 }
 
+.text-white\/90{
+  color: rgb(255 255 255 / 0.9);
+}
+
 .underline{
   text-decoration-line: underline;
+}
+
+.invert{
+  --tw-invert: invert(100%);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
 .backdrop-blur{
@@ -832,7 +949,7 @@ footer .sitemap-link{
   color: rgb(255 255 255 / 0.8);
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 200ms;
+  transition-duration: 100ms;
   transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
 }
 
@@ -851,12 +968,47 @@ footer .social-link{
   color: rgb(255 255 255 / 0.8);
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 200ms;
+  transition-duration: 100ms;
   transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
 }
 
 footer .social-link:hover{
   color: rgb(255 255 255 / 0.95);
+}
+
+h1{
+  width: 100%;
+  border-bottom-width: 1px;
+  border-color: rgb(255 255 255 / 0.2);
+  padding-bottom: 0.5rem;
+  font-family: Urbanist, system-ui, sans-serif;
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+  font-weight: 700;
+}
+
+button{
+  display: flex;
+  align-items: center;
+  --tw-bg-opacity: 1;
+  background-color: rgb(3 14 54 / var(--tw-bg-opacity));
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 100ms;
+  transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+}
+
+button:hover{
+  --tw-bg-opacity: 1;
+  background-color: rgb(2 5 33 / var(--tw-bg-opacity));
+}
+
+button:active{
+  --tw-bg-opacity: 1;
+  background-color: rgb(2 5 33 / var(--tw-bg-opacity));
+  outline-color: rgb(255 255 255 / 0.4);
 }
 
 .hover\:bg-white\/30:hover{
@@ -868,18 +1020,6 @@ footer .social-link:hover{
 }
 
 @media not all and (min-width: 1024px){
-  .max-lg\:grid-cols-1{
-    grid-template-columns: repeat(1, minmax(0, 1fr));
-  }
-
-  .max-lg\:gap-y-3{
-    row-gap: 0.75rem;
-  }
-
-  .max-lg\:pr-24{
-    padding-right: 6rem;
-  }
-
   .max-lg\:pr-6{
     padding-right: 1.5rem;
   }
@@ -894,12 +1034,12 @@ footer .social-link:hover{
     display: none;
   }
 
-  .max-sm\:flex-col{
-    flex-direction: column;
+  .max-sm\:grid-cols-1{
+    grid-template-columns: repeat(1, minmax(0, 1fr));
   }
 
-  .max-sm\:gap-y-8{
-    row-gap: 2rem;
+  .max-sm\:gap-y-3{
+    row-gap: 0.75rem;
   }
 
   .max-sm\:pr-0{
@@ -913,17 +1053,23 @@ footer .social-link:hover{
 }
 
 @media (min-width: 640px){
+  .sm\:flex{
+    display: flex;
+  }
+
   .sm\:hidden{
     display: none;
+  }
+
+  .sm\:flex-row{
+    flex-direction: row;
   }
 
   .sm\:justify-between{
     justify-content: space-between;
   }
-}
 
-@media (min-width: 1024px){
-  .lg\:gap-x-10{
+  .sm\:gap-x-10{
     -moz-column-gap: 2.5rem;
          column-gap: 2.5rem;
   }

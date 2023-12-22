@@ -4,6 +4,7 @@
 /node_modules
 /.pnp
 .pnp.js
+bun.lockb
 
 # testing
 /coverage
@@ -34,3 +35,4 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 bun.lockb
+src/pdfjs-4.0.269-dist/

@@ -35,7 +35,7 @@ function NavLink(
 
 function Navbar() {
 	const [navOpen, setNavOpen] = useState(false)
-  const [current, setCurrent] = useState('');
+  const [current, setCurrent] = useState("");
 	const pathname = usePathname()
 
 	useEffect(() => {

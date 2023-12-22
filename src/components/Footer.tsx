@@ -1,8 +1,8 @@
-import React from 'react'
+import React from "react"
 import { FaGlobe, FaEnvelope, FaPhone, FaLinkedin, FaGithub } from "react-icons/fa"
 import Link from "next/link"
-import AKLogo from './AKLogo'
-import AKLogotype from './AKLogotype'
+import AKLogo from "./AKLogo"
+import AKLogotype from "./AKLogotype"
 
 function SitemapLink(
 	{label, link}: {label: string, link?: string}
@@ -51,7 +51,7 @@ function Footer() {
 				</div>
 
 				{/* Footer body */}
-				<div className="flex flex-row sm:justify-between items-between max-sm:flex-col max-sm:gap-y-8">
+				<div className="grid grid-cols-2 sm:flex sm:flex-row sm:justify-between items-between">
 
 					{/* Sitemap */}
 					<div className="flex flex-col gap-y-2">
@@ -62,7 +62,7 @@ function Footer() {
 					</div>
 
 					{/* Contact Links */}
-					<div className="grid grid-cols-2 lg:gap-x-10 max-lg:grid-cols-1 max-lg:gap-y-3 max-lg:pr-24">
+					<div className="grid grid-cols-2 sm:gap-x-10 max-sm:grid-cols-1 max-sm:gap-y-3">
 						<div className="flex flex-col gap-y-3 text-white/80 text-sm ">
 							<SocialLink label="+91 78408 69129" link="tel:+917840869129" icon={<FaPhone className="scale-x-[-1]" />} />
 							<SocialLink label="hello@adikul.dev" link="mailto:hello@adikul.dev" icon={<FaEnvelope />} />
